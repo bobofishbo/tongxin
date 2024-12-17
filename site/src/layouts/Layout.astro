@@ -16,25 +16,27 @@ const formattedTitle =
     ? title
     : `${title} | CMU Data Science Club`;
 
+const baseURL = import.meta.env.BASE_URL;
+
 const menuItems = [
-  { href: "/", label: "Home", description: "Return to homepage" },
-  { href: "/board", label: "Board", description: "Meet our team" },
+  { href: `${baseURL}`, label: "Home", description: "Return to homepage" },
+  { href: `${baseURL}board`, label: "Board", description: "Meet our team" },
   {
-    href: "/events",
+    href: `${baseURL}events`,
     label: "Events",
     description: "Previous workshops & activities",
   },
   {
-    href: "/projects",
+    href: `${baseURL}projects`,
     label: "Projects",
     description: "Explore our open source projects & initiatives",
   },
   {
-    href: "/competitions",
+    href: `${baseURL}competitions`,
     label: "Competitions",
     description: "Join our data science competitions",
   },
-  { href: "/sponsor", label: "Sponsor", description: "See our sponsors" },
+  { href: `${baseURL}sponsor`, label: "Sponsor", description: "See our sponsors" },
 ];
 ---
 
@@ -74,7 +76,8 @@ const menuItems = [
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "CMU Data Science Club",
-        "url": "https://cmudsc.com",
+        "url": "https://
+        ",
         "alternateName": [
           "CMU AI Club",
           "Carnegie Mellon AI Club",

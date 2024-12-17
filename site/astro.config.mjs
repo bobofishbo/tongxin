@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://cmudsc.com', // Keep your production site URL
+  site: 'https://bobofishbo.github.io/tongxin/', // Keep your production site URL
   base: '/tongxin/', // Add this if deploying to a GitHub Pages subdirectory (replace 'tongxin' with your repo name)
   integrations: [
     tailwind(),
