@@ -1,0 +1,61 @@
+{
+  "$ref": "#/definitions/alumni",
+  "definitions": {
+    "alumni": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "major": {
+            "type": "string"
+          },
+          "gradYear": {
+            "type": "string"
+          },
+          "currentTitle": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "boardPositions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "semesters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "semesters"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "linkedin": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "major",
+          "gradYear",
+          "boardPositions"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
