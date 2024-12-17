@@ -9,24 +9,22 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Build and deploy job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -36,16 +34,19 @@ jobs:
         with:
           node-version: "18"
 
+      # Change to the 'site' directory before running commands
       - name: Install Dependencies
+        working-directory: ./site
         run: npm install
 
       - name: Build the Project
+        working-directory: ./site
         run: npm run build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist" # Upload the generated dist folder
+          path: ./site/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
