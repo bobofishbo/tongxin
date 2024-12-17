@@ -1,0 +1,89 @@
+---
+import DiscordIcon from "../icons/discord.svg?raw";
+import GithubIcon from "../icons/github.svg?raw";
+import InstagramIcon from "../icons/instagram.svg?raw";
+import LinkedinIcon from "../icons/linkedin.svg?raw";
+import MailIcon from "../icons/mail.svg?raw";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="瞳心青少年公益基金">
+	<main
+		class="flex min-h-screen flex-col items-center justify-center text-center p-4 pt-24"
+	>
+		<h1 class="text-4xl md:text-5xl font-bold mb-4 text-[#082b57]">
+			瞳心青少年公益基金
+		</h1>
+
+		<p class="text-lg md:text-xl mb-8 max-w-2xl text-[#082b57]/80">
+			大家好，我们是瞳心公益，天津首个青少年公益组织，天津开发区慈善协会旗下项目之一。
+			我们希望通过团结全世界青少年的力量，将爱传递。
+		</p>
+
+		<div class="flex flex-col items-center gap-6 mb-8">
+			<a
+				href="https://tartanconnect.cmu.edu/datascience/club_signup"
+				class="relative inline-flex items-center justify-center group"
+				data-umami-event="Mailing List Signup"
+			>
+				<span
+					class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-md opacity-0 group-hover:opacity-75 transition-opacity duration-300"
+				></span>
+				<span
+					class="relative bg-[#082b57] text-white px-6 py-2 rounded-full hover:bg-[#082b57]/90 transition-colors inline-flex items-center justify-center"
+				>
+					<span class="w-5 h-5 mr-2" set:html={MailIcon} />
+					Join our Mailing List
+				</span>
+			</a>
+
+			<div class="flex gap-6">
+				<a
+					href="/discord"
+					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer"
+					data-umami-event="Social Click - Discord"
+				>
+					<span class="w-8 h-8 block" set:html={DiscordIcon} />
+				</a>
+				<a
+					href="https://instagram.com/cmudsc"
+					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer"
+					data-umami-event="Social Click - Instagram"
+				>
+					<span class="w-8 h-8 block" set:html={InstagramIcon} />
+				</a>
+				<a
+					href="https://github.com/cmu-dsc"
+					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer"
+					data-umami-event="Social Click - Github"
+				>
+					<span class="w-8 h-8 block" set:html={GithubIcon} />
+				</a>
+				<a
+					href="https://www.linkedin.com/company/cmudsc/"
+					class="text-[#082b57] hover:text-[#082b57]/80 transition-colors"
+					target="_blank"
+					rel="noopener noreferrer"
+					data-umami-event="Social Click - LinkedIn"
+				>
+					<span class="w-8 h-8 block" set:html={LinkedinIcon} />
+				</a>
+			</div>
+		</div>
+
+		<iframe
+			src="https://lu.ma/embed/calendar/cal-cfbbkSaJOwbvylo/events?lt=light"
+			width="100%"
+			height="450"
+			style="border: none; border: 1px solid #bfcbda88; border-radius: 4px; margin: 0 auto; max-width: 600px;"
+			allowfullscreen=""
+			aria-hidden="false"
+			tabindex="0"></iframe>
+	</main>
+</Layout>
