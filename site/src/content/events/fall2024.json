@@ -1,0 +1,125 @@
+{
+  "semester": "Fall 2024",
+  "events": [
+    {
+      "title": "DSC F24 Intro Social",
+      "description": "Join us for our Fall 2024 intro social! Meet the board, learn about upcoming events, and connect with fellow data science enthusiasts.",
+      "date": "2024-09-06",
+      "slides": "https://docs.google.com/presentation/d/1fR75KwgSavPHKf_qibeRfSpp4rizqgszT1HfGX9ikAU/edit?usp=sharing",
+      "tags": [
+        "social"
+      ]
+    },
+    {
+      "title": "Intro to PyTorch",
+      "description": "Learn the fundamentals of PyTorch, including tensors, neural networks, and how to build basic deep learning models.",
+      "date": "2024-09-13",
+      "slides": "https://docs.google.com/presentation/d/1mwNXaPf7rpXLNKJmzK_-9Qtt_AduSaQbtg1C6eVrNW0/edit?usp=sharing",
+      "notebook": "https://colab.research.google.com/drive/1k-x340TK3NN9bb23vnEDJ9DdF554Ht2C?usp=sharing",
+      "tags": [
+        "workshop",
+        "technical"
+      ],
+      "audioSummary": "/audio/pytorch-workshop.opus"
+    },
+    {
+      "title": "Career Workshop",
+      "description": "Get tips on resume building, interview preparation, and navigating the data science job market.",
+      "date": "2024-09-20",
+      "slides": "https://docs.google.com/presentation/d/1DH8GZ0GBWCdSWvOxNjG7WMQxuZB81WHnPnTCcUpwXJQ/edit?usp=sharing",
+      "tags": [
+        "workshop",
+        "career"
+      ]
+    },
+    {
+      "title": "Ian Watson, Google: A Journey Through Data Science",
+      "description": "Join us for an insightful talk with Ian Watson as he shares his experiences and career path in data science.",
+      "date": "2024-09-27",
+      "slides": "https://drive.google.com/file/d/1o71ntqiA8s09LmoT1WU4jliehq1P5UPg/view?usp=sharing",
+      "tags": [
+        "speaker",
+        "career"
+      ],
+      "audioSummary": "/audio/ian-watson.opus"
+    },
+    {
+      "title": "DSC Alumni Career Panel",
+      "description": "Hear from successful DSC alumni about their career journeys, challenges, and advice for aspiring data scientists.",
+      "date": "2024-10-04",
+      "slides": "https://docs.google.com/presentation/d/1BwOv3mU7FwyMV6Tl_iEiOpM3Twrn-MzAljYF9kyfLAE/edit?usp=sharing",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "title": "Nick Singh, DataLemur: Acing the Data Science Interview",
+      "description": "Learn interview strategies and tips from Nick Singh, author of 'Ace the Data Science Interview'.",
+      "date": "2024-10-09",
+      "slides": "https://docs.google.com/presentation/d/1Ce8PSpXjXFjZalGfFDJJ6gReHIpoGMurPVCqWxpSBxo/edit#slide=id.g25e1308b38e_0_0",
+      "tags": [
+        "speaker",
+        "career"
+      ]
+    },
+    {
+      "title": "Bloomberg Data Info Session",
+      "description": "Learn about data science opportunities at Bloomberg and network with their recruiting team.",
+      "date": "2024-10-23",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "title": "Nang Ang, PearAI: Breaking into Y Combinator",
+      "description": "Discover insights about startup culture and entrepreneurship from Nathan Ang, a CMU and Y Combinator alumnus.",
+      "date": "2024-10-25",
+      "tags": [
+        "career",
+        "speaker"
+      ],
+      "recording": "https://www.youtube.com/watch?v=JSV49QD93Rw"
+    },
+    {
+      "title": "Big Data Workshop",
+      "description": "Explore big data technologies and learn how to process and analyze large-scale datasets effectively.",
+      "date": "2024-11-01",
+      "slides": "https://docs.google.com/presentation/d/1aYf1mGZHSW9wTi1W3d0MnN-KlhjVocyaMxWb6Xg5DuI/edit?usp=sharing",
+      "notebook": "https://drive.google.com/file/d/1r2d9d701zBmjoRiDazUrMqOU9o-mE_Sr/view?usp=sharing",
+      "tags": [
+        "workshop",
+        "technical"
+      ],
+      "audioSummary": "/audio/big-data-workshop.opus"
+    },
+    {
+      "title": "How to Pitch Your Data",
+      "description": "Learn the fundamentals of data visualization to effectively transform raw data into clear, impactful visuals for better insights and communication.",
+      "date": "2024-11-08",
+      "slides": "https://docs.google.com/presentation/d/14qSsM_N3deE_RvZf8PXyvjsAOAFwaTGR/edit?usp=sharing",
+      "tags": [
+        "workshop",
+        "technical"
+      ],
+      "audioSummary": "/audio/data-viz-workshop.opus"
+    },
+    {
+      "title": "Joy Zhang, Airbnb: Artificial Intelligence: The Past, Present and Future",
+      "description": "Join Dr. Joy Zhang, Director of Engineering at Airbnb, as he shares insights from his journey through academia, startups, and big tech, discussing the evolution and future of AI technology.",
+      "date": "2024-11-15",
+      "tags": [
+        "speaker",
+        "technical"
+      ]
+    },
+    {
+      "title": "NLP Workshop",
+      "description": "Join our introductory NLP workshop to explore some fundamental text processing techniques, such as n-gram models, Bag of Words, and TF-IDF. Learn how these techniques work, their role in text analysis, and how they can be used for feature extraction and representation in machine learning.",
+      "date": "2024-11-22",
+      "tags": [
+        "workshop",
+        "technical"
+      ]
+    }
+  ]
+}

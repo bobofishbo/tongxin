@@ -1,0 +1,173 @@
+---
+import { Image } from "astro:assets";
+import { getEntry, type CollectionEntry } from "astro:content";
+import MailIcon from "../icons/mail.svg?raw";
+import Layout from "../layouts/Layout.astro";
+
+const { data: sponsors } = (await getEntry(
+  "sponsors",
+  "sponsors",
+)) as CollectionEntry<"sponsors">;
+---
+
+<Layout
+  title="Sponsors"
+  description="Partner with CMU Data Science Club to connect with talented students in AI and machine learning. Learn about our sponsorship opportunities and how to support the next generation of data scientists."
+>
+  <main class="min-h-screen p-8 pt-24">
+    <div class="max-w-6xl mx-auto space-y-8">
+      <!-- Gold Tier -->
+      <div
+        class="relative bg-gradient-to-b from-amber-500/10 to-transparent p-8 rounded-xl"
+      >
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
+          Gold Sponsors
+        </h2>
+        <div class="flex flex-col sm:flex-row justify-center gap-8">
+          {
+            sponsors.gold.map((sponsor) => (
+              <a
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-white/20 backdrop-blur-sm w-full sm:w-80 h-40 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-8 border border-white/10"
+                data-umami-event={`Sponsor Click - ${sponsor.name} (Gold)`}
+              >
+                <Image
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  width={640}
+                  height={320}
+                  class="max-w-full max-h-full object-contain"
+                  quality={90}
+                  format="webp"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Silver Tier -->
+      <div
+        class="relative bg-gradient-to-b from-gray-500/10 to-transparent p-8 rounded-xl"
+      >
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
+          Silver Sponsors
+        </h2>
+        <div class="flex flex-col sm:flex-row justify-center gap-8">
+          {
+            sponsors.silver.map((sponsor) => (
+              <a
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-white/20 backdrop-blur-sm w-full sm:w-64 h-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-6 border border-white/10"
+                data-umami-event={`Sponsor Click - ${sponsor.name} (Silver)`}
+              >
+                <Image
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  width={512}
+                  height={256}
+                  class="max-w-full max-h-full object-contain"
+                  quality={90}
+                  format="webp"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Bronze Tier -->
+      <div
+        class="relative bg-gradient-to-b from-orange-500/10 to-transparent p-8 rounded-xl"
+      >
+        <h2 class="text-2xl font-semibold text-[#082b57] mb-6 text-center">
+          Bronze Sponsors
+        </h2>
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
+          {
+            sponsors.bronze.map((sponsor) => (
+              <a
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-white/20 backdrop-blur-sm w-full sm:w-48 h-24 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] hover:bg-white/30 flex items-center justify-center p-4 border border-white/10"
+                data-umami-event={`Sponsor Click - ${sponsor.name} (Bronze)`}
+              >
+                <Image
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  width={384}
+                  height={192}
+                  class="max-w-full max-h-full object-contain"
+                  quality={90}
+                  format="webp"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Sponsorship CTA -->
+      <div class="bg-[#082b57]/5 p-12 rounded-xl text-center">
+        <h2 class="text-2xl font-bold text-[#082b57] mb-6">Become a Sponsor</h2>
+        <p class="text-[#082b57]/80 mb-8 max-w-2xl mx-auto">
+          Support the next generation of data scientists and connect with
+          talented CMU students. Learn more about our sponsorship opportunities.
+        </p>
+        <a
+          href="mailto:sponsor@cmudsc.com"
+          class="bg-[#082b57] text-white px-8 py-3 rounded-full hover:bg-[#082b57]/80 transition-colors inline-flex items-center"
+          data-umami-event="Sponsor Email Click"
+        >
+          <span class="w-5 h-5 mr-2" set:html={MailIcon} />
+          Contact Us About Sponsorship
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Glass effect styles */
+  a[href^="http"] {
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  a[href^="http"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    padding: 1px;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  a[href^="http"]:hover::before {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+  }
+</style>
